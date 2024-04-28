@@ -23,7 +23,7 @@ jobs:
     - name: Download and extract additional files
       run: |
         sudo docker exec lxde sudo apt install tightvncserver -y
-        sudo docker exec lxde sudo export USER=root
+        sudo docker exec lxde  export USER=root
         sudo docker exec lxde sudo mkdir -p ~/.vnc
         sudo docker exec lxde echo -n "fxlqwq" | vncpasswd -f > ~/.vnc/passwd
         sudo docker exec lxde vncserver :1
