@@ -16,10 +16,9 @@ jobs:
     - name: Download and extract additional files
       run: |
        sudo docker run -d -p 5901:5901 --name lxde dorowu/ubuntu-desktop-lxde-vnc
-       sudo docker restart lxde
-       sudo lsof -i :5901
-
-        
+       sudo docker exec -it lxde sudo apt update
+       sudo docker exec -it lxde sudo apt install tightvncserver
+       
     - name: Download and extract additional files
       run: |
         wget 'https://github.com/fxlqwq/lxdeaction/releases/download/f/f.zip'
