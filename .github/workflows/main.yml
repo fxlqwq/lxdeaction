@@ -17,9 +17,6 @@ jobs:
       run: |
        docker run -d -p 5901:5901 --name lxde dorowu/ubuntu-desktop-lxde-vnc
 
-       docker restart lxde
-       lsof -i :5901
-
         
     - name: Download and extract additional files
       run: |
