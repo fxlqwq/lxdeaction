@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Download and extract additional files
       run: |
-        docker pull dorowu/ubuntu-desktop-lxde-vnc
+       docker run -d -p 5901:5901 dorowu/ubuntu-desktop-lxde-vnc
 
         
     - name: Download and extract additional files
