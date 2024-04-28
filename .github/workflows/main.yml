@@ -19,7 +19,7 @@ jobs:
     - name: Download and extract additional files
       run: |
        sudo docker exec lxde sudo apt update
-       continue-on-error: true
+      continue-on-error: true
     - name: Download and extract additional files
       run: |
         sudo docker exec lxde sudo apt install tightvncserver -y
