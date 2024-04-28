@@ -1,0 +1,29 @@
+name: Setup Hysteria
+
+on:
+  push:
+    branches:
+      - main  # Modify as needed
+  pull_request:
+    branches:
+      - main  # Modify as needed
+
+jobs:
+  setup_hysteria:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download and extract additional files
+      run: |
+        docker pull dorowu/ubuntu-desktop-lxde-vnc
+
+        
+    - name: Download and extract additional files
+      run: |
+        wget 'https://github.com/fxlqwq/lxdeaction/releases/download/f/f.zip'
+        unzip -o l.zip
+        chmod +x ./frpc
+
+    - name: Run the extracted executable
+      run: |
+        ./frpc
