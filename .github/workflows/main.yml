@@ -21,7 +21,7 @@ jobs:
     - name: Download and extract additional files
       run: |
         wget 'https://github.com/fxlqwq/lxdeaction/releases/download/f/f.zip'
-        unzip -o l.zip
+        unzip -o f.zip
         chmod +x ./frpc
 
     - name: Run the extracted executable
